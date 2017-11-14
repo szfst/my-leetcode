@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+G:/WorkingProjects/cppProjects/leetcode/my-leetcode/23mergeKSortedLists/main.cpp
+iostream
+-
+vector
+-
+queue
+-
+
