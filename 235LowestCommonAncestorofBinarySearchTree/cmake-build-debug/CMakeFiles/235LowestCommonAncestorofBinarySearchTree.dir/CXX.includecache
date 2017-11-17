@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+G:/WorkingProjects/cppProjects/leetcode/my-leetcode/235LowestCommonAncestorofBinarySearchTree/main.cpp
+iostream
+-
+
