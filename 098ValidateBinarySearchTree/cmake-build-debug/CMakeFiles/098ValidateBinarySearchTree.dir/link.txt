@@ -1,0 +1,3 @@
+"E:\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\098ValidateBinarySearchTree.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\098ValidateBinarySearchTree.dir/objects.a @CMakeFiles\098ValidateBinarySearchTree.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\098ValidateBinarySearchTree.dir/objects.a -Wl,--no-whole-archive  -o 098ValidateBinarySearchTree.exe -Wl,--out-implib,lib098ValidateBinarySearchTree.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\098ValidateBinarySearchTree.dir\linklibs.rsp
