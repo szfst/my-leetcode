@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+G:/WorkingProjects/cppProjects/leetcode/my-leetcode/200NumberofIslands/main.cpp
+iostream
+-
+vector
+-
+
