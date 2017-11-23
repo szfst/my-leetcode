@@ -35,7 +35,7 @@ public:
         for(int i = 0;i<4;i++){
             int x = startX+position[i][0];
             int y = startY+position[i][1];
-            if(x>=0 && x<m && y>=0 && y<n && !toSolve[x][y] && grid[x][y] == '1'){
+            if(x>=0 && x<m && y>=0 && y<n && !visit[x][y] && grid[x][y] == '1'){
                 visit[x][y]=true;
                 _iter(grid,x,y);
             }
@@ -76,6 +76,5 @@ int main() {
 
     int cout=Solution().numIslands(grid);
     std::cout << cout<< std::endl;
-
     return 0;
 }
