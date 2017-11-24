@@ -1,10 +1,9 @@
 #include <iostream>
 #include <vector>
-
+#include <stack>
+//if we used recursion,we will get segment fault because the depth of the recursion is too long,so we use stack to store the element
 using namespace std;
 class Solution {
-    //using this array to find the direction
-    vector<vector<int>> position = {{1,0},{0,1},{-1,0},{0,-1}};
     //using two variables to define the border
     int m = 0;
     int n = 0;
@@ -28,14 +27,13 @@ public:
                 if(!visit[i][j] && board[i][j]=='O'){
                     if(i==0 || j ==0 || i==m-1 || j==n-1) doNotCover=true;
                     toSolve[i][j]=true;
-
                     _iter(board,i,j);
-
                     solveIter(doNotCover,board);
                     doNotCover=false;
                 }
             }
         }
+        cout<<endl;
     }
     void solveIter(bool doNotCover,vector<vector<char>>& board){
 
@@ -55,31 +53,24 @@ public:
 
     }
     void _iter(vector<vector<char>>& grid,int startX,int startY){
-        find(grid,startX,startY,0,1);
-        find(grid,startX,startY,0,-1);
-        find(grid,startX,startY,1,0);
-        find(grid,startX,startY,-1,0);
-
-    }
-    void find(vector<vector<char>>& grid,int startX,int startY,int ox,int oy){
-        int x = startX+ox;
-        int y = startY+oy;
-        cout<<"x:"<<x<<" "<<y<<endl;
-        if(x>=0 && x<m && y>=0 && y<n && !visit[x][y] && !toSolve[x][y] && grid[x][y] == 'O'){
-            cout<<"in"<<endl;
-
-            if(x==0 || y ==0 || x==m-1 || y==n-1) doNotCover= true;
-
-            toSolve[x][y]=true;
-            cout<<"in1"<<endl;
-            if(x==75 && y==117){
-                cout<<endl;
+         cout<<startX<<startY<<endl;
+        stack<pair<int,int>> s;
+        s.push(make_pair(startX,startY+1));
+        s.push(make_pair(startX,startY-1));
+        s.push(make_pair(startX+1,startY));
+        s.push(make_pair(startX-1,startY));
+        while(!s.empty()){
+            int x = s.top().first;
+            int y = s.top().second;
+            s.pop();
+            if(x>=0 && x<m && y>=0 && y<n && !visit[x][y] && !toSolve[x][y] && grid[x][y] == 'O'){
+                if(x==0 || y ==0 || x==m-1 || y==n-1) doNotCover= true;
+                toSolve[x][y]=true;
+                s.push(make_pair(x,y+1));
+                s.push(make_pair(x,y-1));
+                s.push(make_pair(x+1,y));
+                s.push(make_pair(x-1,y));
             }
-            _iter(grid,x,y);
-            cout<<endl;
-
-        }else{
-            cout<<"not in"<<endl;
         }
     }
 };
@@ -40487,6 +40478,35 @@ int main() {
                     'O'
             }
     };
+    vector<vector<char>> grid;
+    vector<char> item;
+    item.push_back('X');
+    item.push_back('X');
+    item.push_back('X');
+    item.push_back('X');
+    item.push_back('X');
+    grid.push_back(item);
+    vector<char> item1;
+    item1.push_back('X');
+    item1.push_back('X');
+    item1.push_back('O');
+    item1.push_back('O');
+    item1.push_back('X');
+    grid.push_back(item1);
+    vector<char> item2;
+    item2.push_back('X');
+    item2.push_back('X');
+    item2.push_back('X');
+    item2.push_back('X');
+    item2.push_back('X');
+    grid.push_back(item2);
+    vector<char> item3;
+    item3.push_back('X');
+    item3.push_back('X');
+    item3.push_back('X');
+    item3.push_back('O');
+    item3.push_back('X');
+    grid.push_back(item3);
     Solution().solve(array);
 
 
