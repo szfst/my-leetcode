@@ -4,6 +4,6 @@ hard:236(us)
 backtracing:46
 backtracing:47(us)
 combination:77(how to cut the branch)
-nquene051£¨how to improve the speed£©
-nquene052£¨how to improve the speed£©
+nqueen051£¨how to improve the speed£©
+nqueen052£¨how to improve the speed£©
 37. Sudoku Solver(us)
