@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+G:/WorkingProjects/cppProjects/leetcode/my-leetcode/417PacificAtlanticWaterFlow/main.cpp
+iostream
+-
+vector
+-
+stack
+-
+unordered_set
+-
+
