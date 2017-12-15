@@ -1,0 +1,3 @@
+"E:\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\474OnesandZeroes.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\474OnesandZeroes.dir/objects.a @CMakeFiles\474OnesandZeroes.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\474OnesandZeroes.dir/objects.a -Wl,--no-whole-archive  -o 474OnesandZeroes.exe -Wl,--out-implib,lib474OnesandZeroes.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\474OnesandZeroes.dir\linklibs.rsp
